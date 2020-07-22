@@ -72,6 +72,8 @@ server_setup() {
     wget -q --show-progress "https://github.com/Anon-Exploiter/SUID3NUM/blob/master/suid3num.py" -O ~/server/suid3num.py
     wget -q --show-progress "https://github.com/pentestmonkey/unix-privesc-check/raw/master/upc.sh" -O ~/server/unix-privesc-check.sh
     wget -q --show-progress "https://github.com/besimorhino/powercat/raw/master/powercat.ps1" -O ~/server/powercat.ps1
+    wget -q --show-progress "https://github.com/diego-treitos/linux-smart-enumeration/raw/master/lse.sh" -O ~/server/lse.sh
+    wget -q --show-progress "https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/raw/master/linPEAS/linpeas.sh" -O ~/server/linpeas.sh
 
     # Wordpress shell plugin
     wget -q --show-progress "https://github.com/Laceratus/wp-shell-plugin/raw/master/wp-shell-plugin.php" -O ~/server/wp-shell-plugin.php
@@ -93,6 +95,9 @@ server_setup() {
     cp /usr/share/webshells/perl/perl-reverse-shell.pl ~/server/
     cp /usr/share/webshells/php/php-reverse-shell.php ~/server/
     cp /usr/share/webshells/php/simple-backdoor.php ~/server/
+
+    # Change all permissions
+    chmod +x ~/server/*
 
     echo -e "\e[96mServer scripts succesfully installed!"
 }
