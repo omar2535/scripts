@@ -125,6 +125,7 @@ tools_setup() {
     git clone https://github.com/pentestmonkey/smtp-user-enum.git ~/tools/smtp-user-enum
     git clone https://github.com/21y4d/nmapAutomator.git ~/tools/nmapAutomator
     git clone https://github.com/bonsaiviking/NfSpy.git ~/tools/NfSpy
+    git clone https://github.com/jondonas/linux-exploit-suggester-2.git ~/tools/linux-exploit-suggester-2
 
     # permission changing before sym linking
     echo -e "\e[94mChaning a few file permissions"
@@ -135,6 +136,7 @@ tools_setup() {
     sudo ln -s ~/tools/odat/odat.py /usr/local/bin/odat
     sudo ln -s ~/tools/snmpenum/snmpenum.pl /usr/local/bin/snmpenum
     sudo ln -s ~/tools/nmapAutomator/nmapAutomator.sh /usr/local/bin/nmapAutomator
+    sudo ln -s ~/tools/linux-exploit-suggester-2/linux-exploit-suggester-2.pl /usr/local/bin/linux-exploit-suggester-2
     
     # install apt packages
     echo -e "\e[94mInstalling a few apt packages"
