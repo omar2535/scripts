@@ -126,6 +126,7 @@ tools_setup() {
     git clone https://github.com/21y4d/nmapAutomator.git ~/tools/nmapAutomator
     git clone https://github.com/bonsaiviking/NfSpy.git ~/tools/NfSpy
     git clone https://github.com/jondonas/linux-exploit-suggester-2.git ~/tools/linux-exploit-suggester-2
+    git clone https://github.com/SecureAuthCorp/impacket.git ~/tools/impacket
 
     # permission changing before sym linking
     echo -e "\e[94mChaning a few file permissions"
@@ -147,7 +148,7 @@ tools_setup() {
     sudo apt-get install gobuster
     sudo apt install seclists
 
-    # install from python pip
+    # install autorecon from python pip
     echo -e "\e[94mInstalling autorecon"
     sudo apt install python3-pip
     git clone https://github.com/Tib3rius/AutoRecon.git -O ~/tools/autorecon
@@ -156,6 +157,10 @@ tools_setup() {
     python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git
     rm ~/tools/get-pip.py
     sudo ln -s ~/tools/autorecon//src/autorecon/autorecon.py /usr/bin/autorecon
+
+    # install using pip
+    echo -e "\e[94mInstalling impacket"
+    pip install ~/tools/impacket/
 
     # install postman
     echo -e "\e[94mInstalling postman"
