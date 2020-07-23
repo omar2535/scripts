@@ -74,6 +74,11 @@ server_setup() {
     wget -q --show-progress "https://github.com/besimorhino/powercat/raw/master/powercat.ps1" -O ~/server/powercat.ps1
     wget -q --show-progress "https://github.com/diego-treitos/linux-smart-enumeration/raw/master/lse.sh" -O ~/server/lse.sh
     wget -q --show-progress "https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/raw/master/linPEAS/linpeas.sh" -O ~/server/linpeas.sh
+    wget -q --show-progress "https://github.com/PowerShellEmpire/PowerTools/raw/master/PowerUp/PowerUp.ps1" -O ~/server/powerup.ps1
+    wget -q --show-progress "https://github.com/r3motecontrol/Ghostpack-CompiledBinaries/raw/master/SharpUp.exe" -O ~/server/sharpup.exe
+    wget -q --show-progress "https://github.com/ankh2054/windows-pentest/raw/master/Privelege/accesschk-2003-xp.exe" -O ~/server/accesschk-2003-xp.exe
+    wget -q --show-progress "https://github.com/ankh2054/windows-pentest/raw/master/Privelege/accesschk-2008-vista.exe" -O ~/server/accesschk-2008-vista.exe
+
 
     # Wordpress shell plugin
     wget -q --show-progress "https://github.com/Laceratus/wp-shell-plugin/raw/master/wp-shell-plugin.php" -O ~/server/wp-shell-plugin.php
