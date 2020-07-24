@@ -132,6 +132,7 @@ tools_setup() {
     git clone https://github.com/bonsaiviking/NfSpy.git ~/tools/NfSpy
     git clone https://github.com/jondonas/linux-exploit-suggester-2.git ~/tools/linux-exploit-suggester-2
     git clone https://github.com/SecureAuthCorp/impacket.git ~/tools/impacket
+    git clone https://github.com/Neohapsis/creddump7.git ~/tools/creddump7
 
     # permission changing before sym linking
     echo -e "\e[94mChaning a few file permissions"
@@ -178,6 +179,9 @@ tools_setup() {
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O /tmp/chrome_amd64.deb
     sudo apt install gdebi-core
     gdebi /tmp/chrome_amd64.deb
+
+    # install python-crypto
+    sudo apt install python-crypto
 }
 
 # ENTRY POINT OF SCRIPT
