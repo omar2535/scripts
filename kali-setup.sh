@@ -133,6 +133,7 @@ tools_setup() {
     git clone https://github.com/jondonas/linux-exploit-suggester-2.git ~/tools/linux-exploit-suggester-2
     git clone https://github.com/SecureAuthCorp/impacket.git ~/tools/impacket
     git clone https://github.com/Neohapsis/creddump7.git ~/tools/creddump7
+    git clone https://github.com/slimm609/checksec.sh.git ~/tools/checksec
 
     # permission changing before sym linking
     echo -e "\e[94mChaning a few file permissions"
@@ -144,6 +145,7 @@ tools_setup() {
     sudo ln -s ~/tools/snmpenum/snmpenum.pl /usr/local/bin/snmpenum
     sudo ln -s ~/tools/nmapAutomator/nmapAutomator.sh /usr/local/bin/nmapAutomator
     sudo ln -s ~/tools/linux-exploit-suggester-2/linux-exploit-suggester-2.pl /usr/local/bin/linux-exploit-suggester-2
+    sudo ln -s ~/tools/checksec/checksec /usr/local/bin/checksec
     
     # install apt packages
     echo -e "\e[94mInstalling a few apt packages"

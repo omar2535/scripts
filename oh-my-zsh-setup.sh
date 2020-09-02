@@ -42,4 +42,4 @@ oh_my_zsh_setup() {
     echo -e "\e[96mRemember to run \e[4msource ~/.zshrc\e[0m\e[96m if any plugins were installed"
 }
 
-oh_my_zsh_setup();
+oh_my_zsh_setup;
