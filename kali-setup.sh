@@ -134,6 +134,7 @@ tools_setup() {
     git clone https://github.com/SecureAuthCorp/impacket.git ~/tools/impacket
     git clone https://github.com/Neohapsis/creddump7.git ~/tools/creddump7
     git clone https://github.com/slimm609/checksec.sh.git ~/tools/checksec
+    git clone https://github.com/longld/peda.git ~/tools/peda
 
     # permission changing before sym linking
     echo -e "\e[94mChaning a few file permissions"
@@ -155,6 +156,8 @@ tools_setup() {
     sudo apt-get install tnscmd10g
     sudo apt-get install gobuster
     sudo apt install seclists
+    sudo apt install python-crypto
+    sudo apt install gdb
 
     # install autorecon from python pip
     echo -e "\e[94mInstalling autorecon"
@@ -182,8 +185,8 @@ tools_setup() {
     sudo apt install gdebi-core
     gdebi /tmp/chrome_amd64.deb
 
-    # install python-crypto
-    sudo apt install python-crypto
+    # link peda
+    echo "source ~/tools/peda/peda.py" >> ~/.gdbinit
 }
 
 # ENTRY POINT OF SCRIPT
