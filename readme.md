@@ -1,9 +1,10 @@
 # Scripts
 
-This repository will be mostly for scripts that I have used more than twice (I know, I just hate repeating things over and over again).
+Just some scripts to make my life a bit easier since I can't seem to stick with one linux distro 😅.
 
 ## Scripts definition
 
 - `kali-setup.sh`: This script is used to setup zsh along with pentesting tools on a kali linux machine
 - `oh-my-zsh-setup.sh`: To quickly setup oh-my-zsh with extensions that I like to use
-- `debian-setup.sh`: My debian setup script
+- `debian/debian-setup.sh`: My debian setup script
+- `debian/update-script.sh`: Update script for non-debian packages
