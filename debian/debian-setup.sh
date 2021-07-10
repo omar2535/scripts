@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install some packages that I use
-sudo apt-get install zsh curl vim tmux terminator gnome-keyring rsync;
+sudo apt-get install zsh curl vim tmux terminator gnome-keyring rsync gcc;
 
 # Install chrome
 echo -e "\e[91mInstalling chrome";
