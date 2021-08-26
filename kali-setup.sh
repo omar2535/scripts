@@ -155,6 +155,7 @@ tools_setup() {
     sudo apt-get install sipvicious
     sudo apt-get install tnscmd10g
     sudo apt-get install gobuster
+    sudo apt-get install jd-gui
     sudo apt install seclists
     sudo apt install python-crypto
     sudo apt install gdb
