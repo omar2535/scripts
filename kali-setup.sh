@@ -157,17 +157,13 @@ tools_setup() {
     sudo apt-get install gobuster
     sudo apt-get install jd-gui
     sudo apt install seclists
-    sudo apt install python-crypto
     sudo apt install gdb
 
     # install autorecon from python pip
     echo -e "\e[94mInstalling autorecon"
     sudo apt install python3-pip
     git clone https://github.com/Tib3rius/AutoRecon.git -O ~/tools/autorecon
-    wget https://bootstrap.pypa.io/get-pip.py -O ~/tools/
-    python3 ~/tools/get-pip.py
     python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git
-    rm ~/tools/get-pip.py
     sudo ln -s ~/tools/autorecon//src/autorecon/autorecon.py /usr/bin/autorecon
 
     # install using pip
@@ -217,3 +213,6 @@ if [ "$answer" != "${answer#[Yy]}" ] ;then
 else
     echo -e "\e[95mSkipping tools setup";
 fi
+
+echo -e "\e[95mCleaning up";
+sudo apt autoremove;
