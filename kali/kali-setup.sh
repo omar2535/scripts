@@ -184,6 +184,10 @@ tools_setup() {
 
     # link peda
     echo "source ~/tools/peda/peda.py" >> ~/.gdbinit
+
+    # Install ffuf
+    sudo apt-get install -y golang
+    go get -u github.com/ffuf/ffuf
 }
 
 # ENTRY POINT OF SCRIPT
