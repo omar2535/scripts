@@ -39,6 +39,9 @@ oh_my_zsh_setup() {
         sed -i -e 's/plugins=(/plugins=(zsh-syntax-highlighting /1' ~/.zshrc;
     fi
 
+    # Install powerlevel10k
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
     echo -e "\e[96mRemember to run \e[4msource ~/.zshrc\e[0m\e[96m if any plugins were installed"
 }
 
