@@ -188,6 +188,10 @@ tools_setup() {
     # Install ffuf
     sudo apt-get install -y golang
     go get -u github.com/ffuf/ffuf
+
+    # Install RevShellGen
+    git clone https://github.com/t0thkr1s/revshellgen -O ~/tools/revshellgen
+    sudo python3 ~/tools/revshellgen/setup.py install
 }
 
 # ENTRY POINT OF SCRIPT
