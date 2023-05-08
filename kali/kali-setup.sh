@@ -162,8 +162,10 @@ tools_setup() {
     # install autorecon from python pip
     echo -e "\e[94mInstalling autorecon"
     sudo apt install python3-pip
-    git clone https://github.com/Tib3rius/AutoRecon.git -O ~/tools/autorecon
-    python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git
+    sudo apt install python3-venv
+    python3 -m pip install --user pipx
+    python3 -m pipx ensurepath
+    pipx install git+https://github.com/Tib3rius/AutoRecon.git
     sudo ln -s ~/tools/autorecon//src/autorecon/autorecon.py /usr/bin/autorecon
 
     # install using pip
