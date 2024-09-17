@@ -17,10 +17,11 @@ install_nvim() {
 if ! command -v nvim &> /dev/null; then
   install_nvim
 else
-  echo "Neovim is already installed."
+  echo "Neovim is already installed. -- Skipping installation"
 fi
 
 # Link nvim config directory
+echo "Linking neovim config directory"
 rm -rf ~/.config/nvim
 mkdir -p ~/.config/
 ln -s $SCRIPT_DIR/nvim ~/.config/
