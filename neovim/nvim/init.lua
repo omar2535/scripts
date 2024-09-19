@@ -33,5 +33,6 @@ vim.keymap.set({'n', 'v'}, '<leader>ca', vim.lsp.buf.code_action, {})
 
 -- Theme
 -- require('onedark').load()
-vim.cmd('colorscheme tokyonight-day')
+-- vim.cmd('colorscheme tokyonight-day')
+vim.cmd('colorscheme rose-pine-dawn')
 
