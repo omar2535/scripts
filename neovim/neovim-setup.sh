@@ -13,11 +13,23 @@ install_nvim() {
   echo "Neovim installation completed."
 }
 
+# Function to install fzf
+install_fzf() {
+  sudo apt-get install fzf
+}
+
 # Check if Neovim is installed
 if ! command -v nvim &> /dev/null; then
   install_nvim
 else
   echo "Neovim is already installed. -- Skipping installation"
+fi
+
+# Check if fzf is installed
+if ! command -v fzf &> /dev/null; then
+  install_fzf
+else
+    echo "fzf already installed -- skipping installation"
 fi
 
 # Link nvim config directory
