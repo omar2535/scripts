@@ -29,6 +29,7 @@ vim.keymap.set('n', '<leader>fr', ':Neotree reveal<CR>', {})
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 vim.keymap.set('n', 'gdd', vim.lsp.buf.definition, {})
 vim.keymap.set('n', 'gtd', vim.lsp.buf.type_definition, {})
+vim.keymap.set('n', 'gtr', vim.lsp.buf.references, {})
 vim.keymap.set({'n', 'v'}, '<leader>ca', vim.lsp.buf.code_action, {})
 
 -- Theme
