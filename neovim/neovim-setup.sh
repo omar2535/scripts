@@ -45,7 +45,7 @@ else
 fi
 
 # Check if luarocks is installed
-if ! command -v fzf &> /dev/null; then
+if ! command -v luarocks &> /dev/null; then
   install_luarocks
 else
     echo "luarocks already installed -- skipping installation"
