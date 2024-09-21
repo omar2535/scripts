@@ -15,7 +15,17 @@ install_nvim() {
 
 # Function to install fzf
 install_fzf() {
-  sudo apt-get install fzf
+  if [  -n "$(uname -a | grep Ubuntu)" ]; then
+    sudo apt-get install fzf
+  else
+    echo "Install fzf manually -- operating system not supported"
+}
+
+install_luarocks() {
+  if [  -n "$(uname -a | grep Ubuntu)" ]; then
+    sudo apt-get install luarocks
+  else
+    echo "Install luarocks manually -- operating system not supported"
 }
 
 # Check if Neovim is installed
@@ -30,6 +40,13 @@ if ! command -v fzf &> /dev/null; then
   install_fzf
 else
     echo "fzf already installed -- skipping installation"
+fi
+
+# Check if luarocks is installed
+if ! command -v fzf &> /dev/null; then
+  install_luarocks
+else
+    echo "luarocks already installed -- skipping installation"
 fi
 
 # Link nvim config directory
