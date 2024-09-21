@@ -8,3 +8,4 @@ Just some scripts to make my life a bit easier since I can't seem to stick with 
 - `oh-my-zsh-setup.sh`: To quickly setup oh-my-zsh with extensions that I like to use
 - `debian/debian-setup.sh`: My debian setup script
 - `debian/update-script.sh`: Update script for non-debian packages
+- `neovim/neovim-setup.sh`: Script to install and set up neovim
