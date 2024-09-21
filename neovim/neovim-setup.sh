@@ -19,6 +19,7 @@ install_fzf() {
     sudo apt-get install fzf
   else
     echo "Install fzf manually -- operating system not supported"
+  fi
 }
 
 install_luarocks() {
@@ -26,6 +27,7 @@ install_luarocks() {
     sudo apt-get install luarocks
   else
     echo "Install luarocks manually -- operating system not supported"
+  fi
 }
 
 # Check if Neovim is installed
