@@ -11,7 +11,7 @@ vim.cmd("set nowrap")
 vim.g.mapleader = " "
 
 -- For fzf-lua
-vim.keymap.set("n", "<C-P>", require('fzf-lua').files, { desc = "Fzf Files" })
+vim.keymap.set("n", "<C-f>", require('fzf-lua').files, { desc = "Fzf Files" })
 vim.keymap.set("n", "<C-l>", require('fzf-lua').live_grep, { desc = "Fzf live_grep" })
 vim.keymap.set("n", "<C-g>", require('fzf-lua').grep, { desc = "Fzf grep" })
 vim.keymap.set("n", "<C-\\>", require('fzf-lua').buffers, { desc = "Fzf buffer" })
