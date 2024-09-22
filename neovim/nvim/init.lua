@@ -42,3 +42,5 @@ vim.keymap.set({'n', 'v'}, '<leader>ca', vim.lsp.buf.code_action, {})
 -- vim.cmd('colorscheme tokyonight-day')
 -- vim.cmd('colorscheme rose-pine-dawn')
 vim.cmd('colorscheme catppuccin-latte')
+-- vim.cmd('colorscheme one-nvim')
+-- vim.o.background = 'light'
