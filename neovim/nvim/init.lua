@@ -10,6 +10,9 @@ vim.cmd("set number")
 vim.cmd("set nowrap")
 vim.g.mapleader = " "
 
+-- Set up notify
+vim.notify = require('notify')
+
 -- For fzf-lua
 vim.keymap.set("n", "<C-P>", require('fzf-lua').files, { desc = "Fzf Files" })
 vim.keymap.set("n", "<C-l>", require('fzf-lua').live_grep, { desc = "Fzf live_grep" })
@@ -35,12 +38,8 @@ vim.keymap.set('n', 'gtd', vim.lsp.buf.type_definition, {})
 vim.keymap.set('n', 'gtr', vim.lsp.buf.references, {})
 vim.keymap.set("n", "<leader>lrn", vim.lsp.buf.rename, {})
 vim.keymap.set({'n', 'v'}, '<leader>ca', vim.lsp.buf.code_action, {})
-
+vim.keymap.set("n", "]g", vim.diagnostic.goto_next)
+vim.keymap.set("n", "[g", vim.diagnostic.goto_prev)
 
 -- Theme
--- require('onedark').load()
--- vim.cmd('colorscheme tokyonight-day')
--- vim.cmd('colorscheme rose-pine-dawn')
 vim.cmd('colorscheme catppuccin-latte')
--- vim.cmd('colorscheme one-nvim')
--- vim.o.background = 'light'
