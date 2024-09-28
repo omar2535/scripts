@@ -42,4 +42,4 @@ vim.keymap.set("n", "]g", vim.diagnostic.goto_next)
 vim.keymap.set("n", "[g", vim.diagnostic.goto_prev)
 
 -- Theme
-vim.cmd('colorscheme catppuccin')
+vim.cmd('colorscheme catppuccin-mocha')
