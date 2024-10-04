@@ -16,7 +16,7 @@ oh_my_zsh_setup() {
 
     if [ -d ~/.oh-my-zsh ]; then
         echo -e "\e[92mOh-my-zsh installed, Skipping";
-    else 
+    else
         echo -e "\e[91mInstalling oh-my-zsh";
         sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";
     fi
@@ -24,7 +24,7 @@ oh_my_zsh_setup() {
     # Check for zsh-autosuggestions
     if [ -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ]; then
         echo -e "\e[92mzsh autosuggestions installed, Skipping";
-    else 
+    else
         echo -e "\e[91mInstalling zsh-autosuggestions";
         git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions;
         sed -i -e 's/plugins=(/plugins=(zsh-autosuggestions /1' ~/.zshrc;
@@ -33,7 +33,7 @@ oh_my_zsh_setup() {
     # Check for zsh-syntax-highlighting
     if [ -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting ]; then
         echo -e "\e[92mzsh-syntax-highlighting installed, Skipping";
-    else 
+    else
         echo -e "\e[91mInstalling zsh-syntax-highlighting";
         git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
         sed -i -e 's/plugins=(/plugins=(zsh-syntax-highlighting /1' ~/.zshrc;
