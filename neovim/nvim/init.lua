@@ -45,7 +45,7 @@ if not vim.g.vscode then
     vim.keymap.set("n", "[g", vim.diagnostic.goto_prev)
 
 
-	vim.cmd('colorscheme catppuccin-mocha')
+	vim.cmd('colorscheme catppuccin-frappe')
 else
     -- This is in VSCODE
 end
