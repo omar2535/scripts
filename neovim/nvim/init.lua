@@ -21,6 +21,7 @@ if not vim.g.vscode then
     vim.keymap.set("n", "<C-l>", require('fzf-lua').live_grep, { desc = "Fzf live_grep" })
     vim.keymap.set("n", "<C-g>", require('fzf-lua').grep, { desc = "Fzf grep" })
     vim.keymap.set("n", "<C-\\>", require('fzf-lua').buffers, { desc = "Fzf buffer" })
+    vim.keymap.set("n", "<leader>gr", require('fzf-lua').lsp_references, { desc = "Fzf LSP references" })
 
     -- For telescope
     local builtin = require('telescope.builtin')
@@ -34,8 +35,8 @@ if not vim.g.vscode then
     vim.keymap.set('n', '<leader>fr', ':Neotree reveal<CR>', {})
 
     -- For LSP-config
-    vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
-    vim.keymap.set('n', 'gdd', vim.lsp.buf.definition, {})
+    vim.keymap.set('n', 'gh', vim.lsp.buf.hover, {})
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
     vim.keymap.set('n', 'gtd', vim.lsp.buf.type_definition, {})
     vim.keymap.set('n', 'gtr', vim.lsp.buf.references, {})
     vim.keymap.set("n", "<leader>lrn", vim.lsp.buf.rename, {})
