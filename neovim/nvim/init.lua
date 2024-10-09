@@ -16,6 +16,14 @@ if not vim.g.vscode then
     -- Set up notify
     vim.notify = require('notify')
 
+    -- Set up better whitespace
+    vim.g.better_whitespace_enabled = 1
+    vim.g.show_training_whitespace = 0
+    vim.g.strip_whitespace_on_save = 1
+    vim.g.better_whitespace_ctermcolor = 'NONE'
+    vim.g.better_whitespace_guicolor = 'NONE'
+
+
     -- For fzf-lua
     vim.keymap.set("n", "<C-P>", require('fzf-lua').files, { desc = "Fzf Files" })
     vim.keymap.set("n", "<C-l>", require('fzf-lua').live_grep, { desc = "Fzf live_grep" })
