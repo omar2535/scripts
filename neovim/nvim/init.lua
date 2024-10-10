@@ -6,6 +6,9 @@ vim.opt.shiftwidth = 4
 vim.opt.number = true
 vim.opt.wrap = false
 vim.g.mapleader = " "
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.signcolumn = "number"
 
 -- Theme (you might need to adjust this if the colorscheme doesn't load properly in VSCode)
 
