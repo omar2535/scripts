@@ -7,8 +7,9 @@ vim.opt.number = true
 vim.opt.wrap = false
 vim.g.mapleader = " "
 vim.opt.number = true
+vim.opt.guicursor = "a:blinkon100"
 
--- Make my config a bit more like normal text editors
+-- Make my config a bit more like normal text editors by allowing me to use the arrow keys to move around
 vim.api.nvim_set_keymap('i', '<C-H>', '<C-W>', { noremap = true, silent = true })
 
 -- For dynamic line numbers (I don't really use this since I have a git statusline which conflicts with this)
