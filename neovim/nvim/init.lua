@@ -7,8 +7,13 @@ vim.opt.number = true
 vim.opt.wrap = false
 vim.g.mapleader = " "
 vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.signcolumn = "number"
+
+-- Make my config a bit more like normal text editors
+vim.api.nvim_set_keymap('i', '<C-H>', '<C-W>', { noremap = true, silent = true })
+
+-- For dynamic line numbers (I don't really use this since I have a git statusline which conflicts with this)
+-- vim.opt.relativenumber = true
+-- vim.opt.signcolumn = "number"
 
 -- Theme (you might need to adjust this if the colorscheme doesn't load properly in VSCode)
 
