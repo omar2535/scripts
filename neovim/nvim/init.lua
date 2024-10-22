@@ -64,6 +64,7 @@ if not vim.g.vscode then
 
 
 	vim.cmd('colorscheme catppuccin-frappe')
+    -- vim.cmd('colorscheme catppuccin-latte')
 else
     -- This is in VSCODE
 end
