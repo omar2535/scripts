@@ -7,6 +7,7 @@ vim.opt.number = true
 vim.opt.wrap = false
 vim.g.mapleader = " "
 vim.opt.number = true
+vim.opt.clipboard = "unnamedplus"
 -- vim.opt.guicursor = "a:blinkon100"
 
 -- Make my config a bit more like normal text editors by allowing me to use the arrow keys to move around
