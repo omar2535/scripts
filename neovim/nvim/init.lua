@@ -58,6 +58,7 @@ if not vim.g.vscode then
     vim.keymap.set('n', 'gD', vim.lsp.buf.type_definition, {})
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, {})
     vim.keymap.set("n", "<leader>lrn", vim.lsp.buf.rename, {})
+    -- Reminder: There's one more keymap: <leader>rn for renaming a symbol with live preview
     vim.keymap.set({'n', 'v'}, '<leader>ca', vim.lsp.buf.code_action, {})
     vim.keymap.set("n", "]g", vim.diagnostic.goto_next)
     vim.keymap.set("n", "[g", vim.diagnostic.goto_prev)
