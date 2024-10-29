@@ -37,7 +37,11 @@ return {
                     { name = "luasnip" }, -- For luasnip users.
                 }, {
                         { name = "buffer" },
-                    }),
+                    }
+                ),
+                experimental = {
+                    ghost_text = true,
+                },
             })
         end,
     },
