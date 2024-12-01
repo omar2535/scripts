@@ -9,7 +9,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require('mason-lspconfig').setup({
-                ensure_installed = { "lua_ls", "pyright", "ruff" }
+                ensure_installed = { "lua_ls", "pyright", "ruff", "gopls"}
             })
         end
     },
@@ -17,9 +17,13 @@ return {
         "neovim/nvim-lspconfig",
         config = function()
             local lspconfig = require('lspconfig')
+
+            -- Set up LSP here
             lspconfig.lua_ls.setup({})
             lspconfig.pyright.setup({})
             lspconfig.ruff.setup({})
+            lspconfig.gopls.setup({})
+
             vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
             vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
             vim.keymap.set({'n', 'v'}, '<leader>ca', vim.lsp.buf.code_action, {})
