@@ -3,6 +3,9 @@
 # Setup neovim
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
+# Make sure python-venv is installed
+sudo apt install -y python3-venv
+
 # Function to install Neovim if it's not installed
 install_nvim() {
   echo "Neovim is not installed. Installing..."
