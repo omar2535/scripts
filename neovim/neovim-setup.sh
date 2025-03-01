@@ -10,7 +10,7 @@ sudo apt install -y python3-venv
 install_nvim() {
   echo "Neovim is not installed. Installing..."
   if [  -n "$(cat /etc/os-release | grep Ubuntu)" ]; then
-    sudo apt-get install neovim
+    sudo snap install nvim --classic
   else
     echo "Installing neovim manually -- operating system not supported"
     curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
