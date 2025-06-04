@@ -38,6 +38,23 @@ install_luarocks() {
   fi
 }
 
+install_go() {
+  if [  -n "$(uname -a | grep Ubuntu)" ]; then
+    sudo snap install go  --classic
+    go install -v golang.org/x/tools/gopls@latest
+  else
+    echo "Install luarocks manually -- operating system not supported"
+  fi
+}
+
+install_pyright() {
+  if [  -n "$(uname -a | grep Ubuntu)" ]; then
+    sudo snap install pyright --classic
+  else
+    echo "Install luarocks manually -- operating system not supported"
+  fi
+}
+
 # Check if Neovim is installed
 if ! command -v nvim &> /dev/null; then
   install_nvim
@@ -57,6 +74,20 @@ if ! command -v luarocks &> /dev/null; then
   install_luarocks
 else
     echo "luarocks already installed -- skipping installation"
+fi
+
+# Check if golang is installed
+if ! command -v go &> /dev/null; then
+  install_go
+else
+    echo "go already installed -- skipping installation"
+fi
+
+# Check if pyright is installed
+if ! command -v pyright &> /dev/null; then
+  install_pyright
+else
+    echo "pyright already installed -- skipping installation"
 fi
 
 # Link nvim config directory
