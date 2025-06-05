@@ -4,7 +4,7 @@ set -e  # Exit immediately if a command exits with a non-zero status
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 # Function to check and install a package if not present
-install_if_missing() {
+install_if_missing_apt() {
     local cmd=$1
     local pkg=${2:-$1}
 
@@ -20,30 +20,30 @@ install_if_missing() {
 }
 
 # Essential CLI tools
-install_if_missing curl
-install_if_missing vim
-install_if_missing git
-install_if_missing tmux
-install_if_missing zsh
-install_if_missing pip3 python3-pip
+install_if_missing_apt curl
+install_if_missing_apt vim
+install_if_missing_apt git
+install_if_missing_apt tmux
+install_if_missing_apt zsh
+install_if_missing_apt pip3 python3-pip
 
 # Build dependencies for pyenv
-install_if_missing make
-install_if_missing build-essential
-install_if_missing libssl-dev
-install_if_missing zlib1g-dev
-install_if_missing libbz2-dev
-install_if_missing libreadline-dev
-install_if_missing libsqlite3-dev
-install_if_missing wget
-install_if_missing llvm
-install_if_missing libncurses5-dev
-install_if_missing libncursesw5-dev
-install_if_missing xz-utils
-install_if_missing tk-dev
-install_if_missing libffi-dev
-install_if_missing liblzma-dev
-install_if_missing python3-openssl
+install_if_missing_apt make
+install_if_missing_apt build-essential
+install_if_missing_apt libssl-dev
+install_if_missing_apt zlib1g-dev
+install_if_missing_apt libbz2-dev
+install_if_missing_apt libreadline-dev
+install_if_missing_apt libsqlite3-dev
+install_if_missing_apt wget
+install_if_missing_apt llvm
+install_if_missing_apt libncurses5-dev
+install_if_missing_apt libncursesw5-dev
+install_if_missing_apt xz-utils
+install_if_missing_apt tk-dev
+install_if_missing_apt libffi-dev
+install_if_missing_apt liblzma-dev
+install_if_missing_apt python3-openssl
 
 # Install pyenv if not installed or if it's linking to a Windows path
 if ! command -v pyenv &> /dev/null || [[ "$(command -v pyenv)" == /mnt/c/* ]]; then
